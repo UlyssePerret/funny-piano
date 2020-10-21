@@ -16,7 +16,7 @@ npm install
 npm run serve
 ```
 
-#### Rappel Pour git
+#### Rappel Pour Git
 https://github.com/UlyssePerret/funny-piano.git
 
 Attention à bien faire :
@@ -28,7 +28,7 @@ Pour commiter avec un message git commit -am 'mon message de commit
 
 Pour pusher sur votre repo github git push
 
-### Solution aneexe
+### Solution Annexe
 brew install yarn => Installation yarn
 
 yarn serve

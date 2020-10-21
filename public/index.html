@@ -27,7 +27,7 @@
    </div> -->
    <!--piano Cancas-->
    <div class="Piano">
-    <div class="Piano-clavier m-auto flex flex-col">
+    <div class="Piano-clavier ">
         <div class="touches-blanches flex mt-3">
             <button class="touche-blanche" id="Do"> <!-- Do :C : /assets/sounds/C.mp3 -->
             </button>
@@ -44,19 +44,19 @@
         </div>
         <div class="touches-noires flex">
             <button class="touche-noire" id="DoDiese">
-            <!--DoDiese# :Cd : /assets/sounds/C#.mp3-->
+            <!--DoDiese# :C# : /assets/sounds/C#.mp3-->
           </button> 
             <button class="touche-noire" id="ReDiese" >
-              <!--ReDiese# :Dd : /assets/sounds/D#.mp3-->
+              <!--ReDiese# :D# : /assets/sounds/D#.mp3-->
             </button>
             <button class="touche-noire" id="FaDiese"  >
-              <!--FaDiese# :Fd : /assets/sounds/F#.mp3-->
+              <!--FaDiese# :F# : /assets/sounds/F#.mp3-->
             </button>
             <button class="touche-noire"  id="SolDiese"  >
-              <!--SolDiese# :Gd : /assets/sounds/G#.mp3-->
+              <!--SolDiese# :G# : /assets/sounds/G#.mp3-->
             </button>
             <button class="touche-noire"  id="LaDiese"  >
-              <!--LaDiese :Ad : /assets/sounds/A#.mp3-->
+              <!--LaDiese :A# : /assets/sounds/A#.mp3-->
             </button>
         </div>
     </div>
@@ -75,13 +75,45 @@
     <!-- test div   <div id="app">  </div>-->
     <script> 
       console.log("Test Debut - je suis un piano")
+      /*Table de Correspondance note FR-ANg
+      Do -> C  
+      Do# -> C#  
+      Ré -> D
+      Ré# -> D#
+      Mi -> E
+      Fa -> F
+      Fa# -> F#
+      Sol -> G 
+      Sol# -> G# 
+      La -> A
+      La -> A# 
+      Si -> B 
+      */
+      //Blanc
+      const Do = document.getElementById('Do'); 
+      const Re = document.getElementById('Re'); 
+      const Mi = document.getElementById('Mi'); 
+      const Fa = document.getElementById('Fa'); 
+      const Sol = document.getElementById('Sol'); 
+      const La = document.getElementById('La'); 
+      const Si = document.getElementById('Si'); 
+      //Noir
+      const DoDiese = document.getElementById('DoDiese');
+      const ReDiese = document.getElementById('ReDiese');
+      const FaDiese = document.getElementById('FaDiese');
+      const SolDiese = document.getElementById('SolDiese');
+      const LaDiese = document.getElementById('LaDiese');
 
-      query
-      console.log("Test Debut - je suis un piano")
+       Do.addEventListener('click', function (event) {
+        console.log('Je suis un Do');
 
-      const audio = document.createElement('audio')
+        const audio = document.createElement('audio')
       audio.src = "./assets/sounds/A.mp3"
       audio.play()
+
+      });
+
+     
 
       console.log("Test Fin - je suis un piano")
     </script>

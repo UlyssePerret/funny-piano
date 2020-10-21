@@ -87,6 +87,10 @@ Conteneur- clavier
 /*
 * Touches blanches
 */
+.touche-blanches{
+    display: flex;/*flex */
+    margin-top: 0.75rem;/*mt-3*/
+}
 .touche-blanche:nth-child(1) {
     height: 250px ;
     width: 70px ;
@@ -112,6 +116,7 @@ Conteneur- clavier
     width: 500px ;
     margin-top: -250px ;
     align-items: flex-start ;
+    display: flex;
 }
 .touche-noire {
     display: flex;
@@ -121,13 +126,15 @@ Conteneur- clavier
     border-radius: 0px 0px 5px 5px ;
     margin-left: 43px ;
 }
-
 .touche-noire:nth-child(1) {
     margin-left: 56px ;
 }
 .touche-noire:nth-child(2) {
     margin-right: 73px ;
 }
+/*
+*Notes de bas
+*/
 .Notes-clavier {
     width: 531px ;
     justify-content: center ;

@@ -1,6 +1,6 @@
 <template>
 
-  <div id="app" class="pt-mono">
+  <div id="app" class="pt-mono"> 
     <v-header></v-header> 
   </div>
 </template>

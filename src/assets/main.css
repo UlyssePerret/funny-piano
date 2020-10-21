@@ -1,9 +1,9 @@
-/* Desktop - Accueil */
+/* Normal*/
 body{
     background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
 }
+/*Mobile*/
 @media (width-min:300px){
-
     .titre-emoji{
         font-family: "PT Mono" ,Arial serif;
         position: absolute;

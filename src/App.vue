@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <h1>Bon courage !</h1>
+  <div id="app" class="titre-emoji">
+    <h1 >The emoji piano</h1>
   </div>
 </template>
-
+ 
 <script>
 
 export default {

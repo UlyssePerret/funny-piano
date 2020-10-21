@@ -7,7 +7,7 @@ body{
 } 
 
 /**
-Fonts
+Fonts - Police
 **/
 .pt-mono { 
     font-family: 'PT Mono', sans-serif;  
@@ -23,26 +23,27 @@ Fonts
     justify-content: center;
     top:40px; 
     /*Propriété*/
-    background: #111111;
+    background-color: #111111;
     border-radius: 10px;
     }
 
 /*Pour le titre*/
 .text-title{ 
-position:relative;
-
+ /*position*/
+position:relative; 
 top: 20%; 
+ /*taille*/
 font-size: 30px;
 line-height: 34px;
-/* identical to box height */
+ /*propriete*/
 text-align: center;
 color: #FFFFFF;
 } 
 
 .centrer-title{ 
     /*position*/ 
-        text-align: center; 
-        margin : auto; 
+    text-align: center; 
+    margin : auto; 
     } 
 .centrer-image{ 
     /*position*/  
@@ -51,41 +52,37 @@ color: #FFFFFF;
     } 
 
 .image-emoji{ 
-/*taille*/
-width:100%;
-padding:10px;    
-/*position*/ 
-position: relative;
-margin-top:200px;
-
-} 
+    /*taille*/
+    width:100%;
+    padding:10px;    
+    /*position*/ 
+    position: relative;
+}  
 
 .image-piano{
     /*taille*/
     width:100%;  
     /*position*/ 
     position: relative; 
-  
 }
 /*
 * Test Piano  
 Conteneur- clavier
 */
 .Piano{
-    margin-top:20px;
-    padding: 1px;
+    /*position*/ 
+    margin-top:20px; 
 }
 .Piano-clavier {
     height: 275px ;
     width: 530px ;
     border-radius: 10px ;
-    background: black ;
+    background-color: black ;
     margin-bottom: 40px ;
     align-items: center ;
-
-  /*margin: auto; m-auto*/
-   /* display: flex;flex*/
-   /* flex-direction: column;/*flex-colum*/
+    margin: auto; /*m-auto*/
+    display: flex; /* flex*/
+    flex-direction: column;/*flex-colum*/
 }
 /*
 * Touches blanches
@@ -93,19 +90,19 @@ Conteneur- clavier
 .touche-blanche:nth-child(1) {
     height: 250px ;
     width: 70px ;
-    background: #FFFFFF ;
+    background-color: #FFFFFF ;
     border-radius: 5px 0px 0px 5px ;
 }
 .touche-blanche:nth-child(7) {
     height: 250px ;
     width: 70px ;
-    background: #FFFFFF ; 
+    background-color: #FFFFFF ; 
     border-radius: 0px 5px 5px 0px ; 
 }
 .touche-blanche {
     height: 250px ;
     width: 70px ;
-    background: #FFFFFF ;
+    background-color: #FFFFFF ;
     margin: 0px 2px ;
 }
 /*
@@ -117,9 +114,10 @@ Conteneur- clavier
     align-items: flex-start ;
 }
 .touche-noire {
+    display: flex;
     height: 185px ;
     width: 30px ;
-    background: #000000 ;
+    background-color:#000000 ;
     border-radius: 0px 0px 5px 5px ;
     margin-left: 43px ;
 }
@@ -134,63 +132,57 @@ Conteneur- clavier
     width: 531px ;
     justify-content: center ;
     padding-bottom: 34px;
+    margin:auto; 
+    display: flex;
 }
 .note {
     text-transform: uppercase ;
     width: 73px ;
     color: rgba(255, 255, 255, 0.4) ;
+    
 }
+ 
+.image-emoji{ 
+    display: flex;   
+}
+
 /*
-* Test Focus - couleur
+*MEDIA : DESCKTOP 
 */
-.touche-blanche:focus {
-    background: #FFD12D ;
-}
-.touche-noire:focus {
-    background: #E6016F ;
-}
-    /*
-    *MEDIA : DESCKTOP 
-    */
-    @media screen and  (min-width:1000px )  {
+    @media screen and  (min-width:400px )  {
     /*test responsibe
     .text-couleur{
             color: red;  
     }
     */
-
-    .image-piano{ 
-        /*position*/ 
-        margin-right: 35%; 
-        margin-left:  35%;    
+    .Piano{ 
+        /*position*/  
        padding: 10px;
-    } 
+    }  
+    .image-emoji{    
+        /*position*/  
+        margin-top:300px; 
+    }  
 
-    .image-emoji{ 
-        margin-right: 50%; 
-        margin-left: 50%;     
-    }
-
-    }
-    /**/
-    /*Mobile*/
-    /**/
-    @media    (min-width:100px ) and (max-width:1000px ){
+}
+/**/
+/*Mobile*/
+/*rem le flex resous pas mal de souci mais il faut changer le padding et la hauteur entre titre-emoji de l'aplication*/
+/**/
+    @media    (min-width:100px ) and (max-width:400px ){
     /*test responsibe
     .text-couleur{
         color: blue;  
     }
     */ 
- 
-    .image-piano{ 
-        /*position*/ 
-        margin:0; 
-       padding: 10px;
-    }
-
-    .image-emoji{ 
-        margin-left: 35%;
-        margin-right: 35%;     
-    }
+    .Piano{ 
+        /*position*/  
+       padding: 1px;/*on change le padding pour que le clavier soit bien accoler*/
+    } 
+  
+    .image-emoji{    
+        /*position*/  
+        margin-top:100px; /*on change la hauter*/
+    }  
 
 }

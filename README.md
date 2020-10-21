@@ -22,13 +22,19 @@ https://github.com/UlyssePerret/funny-piano.git
 Attention à bien faire :
 git clone https://github.com/UlyssePerret/funny-piano.git
 
-Pour ajouter les nouveaux fichiers git add .
+Pour ajouter les nouveaux fichiers ```git add .```
 
-Pour commiter avec un message git commit -am 'mon message de commit
+Pour commiter avec un message ```git commit -am 'mon message de commit```
 
-Pour pusher sur votre repo github git push
+Pour pusher sur votre repo github ```git push```
 
 ### Solution Annexe
-brew install yarn => Installation yarn
+```
+brew install yarn`
+``
+ => Installation yarn
 
+```
 yarn serve
+```
+=>lancment serveur serv

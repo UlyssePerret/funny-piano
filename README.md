@@ -29,9 +29,8 @@ Pour commiter avec un message ```git commit -am 'mon message de commit```
 Pour pusher sur votre repo github ```git push```
 
 ### Solution Annexe
+brew install yarn
 ```
-brew install yarn`
-``
  => Installation yarn
 
 ```

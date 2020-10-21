@@ -1,4 +1,4 @@
-/*
+/*CSS que pour le PIANOT
 * Test Piano  
 Conteneur- clavier
 */
@@ -41,6 +41,11 @@ Conteneur- clavier
     width: 70px ;
     background-color: #FFFFFF ;
     margin: 0px 2px ;
+    color:yellow;
+}
+
+.touche-blanche:focus  {
+    color:yellow;  
 }
 /*
 * Touches noires
@@ -64,6 +69,9 @@ Conteneur- clavier
 }
 .touche-noire:nth-child(2) {
     margin-right: 73px ;
+}
+.touche-blanche:focus  {
+    color:red;  
 }
 /*
 *Notes de bas

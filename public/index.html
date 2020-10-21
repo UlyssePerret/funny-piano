@@ -29,7 +29,7 @@
    <div class="Piano">
     <div class="Piano-clavier ">
         <div class="touches-blanches flex mt-3">
-            <button class="touche-blanche"  id="Do"> </button>
+            <button class="touche-blanche"  id="Do">a </button>
             <button class="touche-blanche" id="Re" > </button>
             <button class="touche-blanche" id="Mi"> </button>
             <button class="touche-blanche" id="Fa" > </button>
@@ -96,13 +96,13 @@
         const audio = document.createElement('audio')
         console.log(id);
         switch (id) {
-          case 'Do':   
-            audio.src = "./assets/sounds/C.mp3";
-          
+          case 'Do':
+            
+            audio.src = "./assets/sounds/C.mp3"; 
             break;
           
           case 'DoDiese': 
-            audio.src = "./assets/sounds/C#.mp3"
+            audio.src = "./assets/sounds/C%23.mp3"
             
             break;
           
@@ -111,7 +111,7 @@
             break;
 
           case 'ReDiese':  
-            audio.src = "./assets/sounds/D#.mp3"
+            audio.src = "./assets/sounds/D%23.mp3"
             break;
 
           case 'Mi':  
@@ -123,7 +123,7 @@
             break;
           
           case 'FaDiese':  
-            audio.src = "./assets/sounds/F#.mp3"
+            audio.src = "./assets/sounds/F%23.mp3"
             break;
 
             case 'Sol':  
@@ -131,13 +131,13 @@
             break;
 
             case 'SolDiese':  
-            audio.src = "./assets/sounds/G#.mp3"
+            audio.src = "./assets/sounds/G%23.mp3"
             break;
             case 'La':  
             audio.src = "./assets/sounds/A.mp3"
             break;
             case 'LaDiese':  
-            audio.src = "./assets/sounds/A#.mp3"
+            audio.src = "./assets/sounds/A%23.mp3"
             break;
             case 'Si':  
             audio.src = "./assets/sounds/B.mp3"

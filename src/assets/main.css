@@ -1,62 +1,63 @@
 /**/
 /* Vue Normal*/
 /**/
-body{
-    background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
-}
-/*Titre Emoji*/
-.bloc-titre{
-    position: absolute;
-    position: absolute;
-    width: 332px;
-    height: 60px;
-    left: 41px;
-    top: 30px;
-    background: #111111;
-    border-radius: 10px;
-    }
-/**
-Fonts
-**/
-.pt-mono { 
-    font-family: 'PT Mono', sans-serif;
-}
-    .text-texte{
-        color: #FFFFFF;  
-    }
 
+
+@media screen and (max-width:1000px){
+ 
     .text-couleur{
         color: red;  
     }
+
+    /*Titre Emoji*/
+    .bloc-titre{
+        /*position*/
+        position: relative;
+         /*margin*/ 
+        }
+   /**
+    Fonts
+    **/
+    .pt-mono { 
+        font-family: 'PT Mono', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+    } 
+}
+
+
 /**/
 /*Mobile*/
 /**/
-    @media (width-min:300px){
-    
+    @media all and (min-width:400px ) and (min-width:1000px ){
+        body{
+            background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
+        } 
+ 
     .bloc-titre{
-    position: absolute;
-    position: absolute;
+
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 0%;
-    
-    
+    /*position*/
+    position:relative;
+    left: 40px;
+    top: 30px;
+    width: 300px;
+    height: 60px; 
+ 
     background: #111111;
     border-radius: 10px;
     }
     
         .text-texte{
             /*issue figmae*/
-            position: absolute;
-            left: 9.34%;
-            right: 9.34%;
-            top: 21.67%;
-            bottom: 21.67%;
-            
-            font-family: "PT Mono";
-            font-style: normal;
-            font-weight: normal;
+            position:relative;
+            left: 9%;
+            right: 9%;
+            top: 21%;
+            bottom: 21%; 
             font-size: 30px;
             line-height: 34px;
             /* identical to box height */

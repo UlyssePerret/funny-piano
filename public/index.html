@@ -104,16 +104,24 @@
       const SolDiese = document.getElementById('SolDiese');
       const LaDiese = document.getElementById('LaDiese');
 
-       Do.addEventListener('click', function (event) {
-        console.log('Je suis un Do');
-
+      //Son
+      function toucherToucheClavier(){
+        Do.addEventListener('click', function (event) {
+       // console.log('Je suis un Do');
         const audio = document.createElement('audio')
-      audio.src = "./assets/sounds/A.mp3"
-      audio.play()
-
+        audio.src = "./assets/sounds/C.mp3"
+        audio.play()
+      });
+      }
+    
+       Do.addEventListener('click', function (event) {
+       // console.log('Je suis un Do');
+        const audio = document.createElement('audio')
+        audio.src = "./assets/sounds/C.mp3"
+        audio.play()
       });
 
-     
+ 
 
       console.log("Test Fin - je suis un piano")
     </script>

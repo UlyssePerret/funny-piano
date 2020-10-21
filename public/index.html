@@ -27,24 +27,38 @@
    </div> -->
    <!--piano Cancas-->
    <div class="Piano">
-    <div class="Piano-clavier  m-auto flex flex-col">
+    <div class="Piano-clavier m-auto flex flex-col">
         <div class="touches-blanches flex mt-3">
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/C.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/D.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/E.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/F.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/G.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/A.mp3')"></button>
-            <button class="touche-blanche" @click="playAudio('/assets/sounds/B.mp3')"></button>
+            <button class="touche-blanche" id="Do"> <!--Do :C : /assets/sounds/C.mp3 -->
+            </button>
+            <button class="touche-blanche" id="Re" > <!--Re :D  : /assets/sounds/D.mp3 -->
+            </button>
+            <button class="touche-blanche"  id="Mi"><!--Mi :E  : /assets/sounds/E.mp3-->
+            </button>
+            <button class="touche-blanche" id="Fa" ><!--Fa :F : /assets/sounds/F.mp3-->
+            </button>
+            <button class="touche-blanche" id="Sol" ><!--Sol :G : /assets/sounds/G.mp3--></button>
+            <button class="touche-blanche" id="La" > <!--La :A : /assets/sounds/A.mp3--></button>
+            <button class="touche-blanche" id="Si" ><!--Si :B : /assets/sounds/B.mp3--></button>
+            </button>
         </div>
         <div class="touches-noires flex">
-            <button class="touche-noire" @click="playAudio('/assets/sounds/Cc.mp3')"></button>
-            <button class="touche-noire" @click="playAudio('/assets/sounds/Dd.mp3')"></button>
-            <button class="touche-noire" @click="playAudio('/assets/sounds/Ff.mp3')"></button>
-            <button class="touche-noire" @click="playAudio('/assets/sounds/Gg.mp3')"></button>
-            <button class="touche-noire" @click="playAudio('/assets/sounds/Aa.mp3')"></button>
+            <button class="touche-noire" id="DoDiese">
+            <!--DoDiese# :Cd : /assets/sounds/Cd.mp3-->
+          </button> 
+            <button class="touche-noire" id="ReDiese" >
+              <!--ReDiese# :Dd : /assets/sounds/Dd.mp3-->
+            </button>
+            <button class="touche-noire" id="FaDiese"  >
+              <!--FaDiese# :Fd : /assets/sounds/Fd.mp3-->
+            </button>
+            <button class="touche-noire"  id="SolDiese"  >
+              <!--SolDiese# :Gd : /assets/sounds/Gd.mp3-->
+            </button>
+            <button class="touche-noire"  id="LaDiese"  >
+              <!--LaDiese :Ad : /assets/sounds/Ad.mp3-->
+            </button>
         </div>
-        
     </div>
     <div class="Notes__container m-auto flex">
         <p class="note">Do</p>

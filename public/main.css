@@ -68,10 +68,11 @@ margin-top:200px;
   
 }
 /*
-* Test Piano - pn
+* Test Piano  
+Conteneur- clavier
 */
 .Piano{
-    margin-top:10px;
+    margin-top:20px;
     padding: 1px;
 }
 .Piano-clavier {
@@ -81,8 +82,14 @@ margin-top:200px;
     background: black ;
     margin-bottom: 40px ;
     align-items: center ;
-}
 
+  /*margin: auto; m-auto*/
+   /* display: flex;flex*/
+   /* flex-direction: column;/*flex-colum*/
+}
+/*
+* Touches blanches
+*/
 .touche-blanche:nth-child(1) {
     height: 250px ;
     width: 70px ;
@@ -101,6 +108,9 @@ margin-top:200px;
     background: #FFFFFF ;
     margin: 0px 2px ;
 }
+/*
+* Touches noires
+*/
 .touches-noires {
     width: 500px ;
     margin-top: -250px ;
@@ -130,9 +140,9 @@ margin-top:200px;
     width: 73px ;
     color: rgba(255, 255, 255, 0.4) ;
 }
-
 /*
-*/ 
+* Test Focus - couleur
+*/
 .touche-blanche:focus {
     background: #FFD12D ;
 }

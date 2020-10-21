@@ -29,7 +29,7 @@
    <div class="Piano">
     <div class="Piano-clavier ">
         <div class="touches-blanches flex mt-3">
-            <button class="touche-blanche"  id="Do">a </button>
+            <button class="touche-blanche"  id="Do">  </button>
             <button class="touche-blanche" id="Re" > </button>
             <button class="touche-blanche" id="Mi"> </button>
             <button class="touche-blanche" id="Fa" > </button>
@@ -39,10 +39,10 @@
         </div>
         <div class="touches-noires flex">
             <button class="touche-noire" id="DoDiese">  </button> 
-            <button class="touche-noire" id="ReDiese" > </button>
-            <button class="touche-noire" id="FaDiese"  > </button>
-            <button class="touche-noire"  id="SolDiese"  > </button>
-            <button class="touche-noire"  id="LaDiese"  > </button>
+            <button class="touche-noire" id="ReDiese"> </button>
+            <button class="touche-noire" id="FaDiese" > </button>
+            <button class="touche-noire"  id="SolDiese" > </button>
+            <button class="touche-noire"  id="LaDiese" > </button>
         </div>
     </div>
     <div class="Notes-clavier m-auto flex">
@@ -90,56 +90,68 @@
 
            //Son
         function toucherToucheClavier(id, val){
-          blanc=false;
-          noir=false;
+          blanc=false; 
         val.addEventListener("click", function (event) { 
         const audio = document.createElement('audio')
         console.log(id);
         switch (id) {
           case 'Do':
-            
+          blanc=true;
+          MiseYellow(val)
             audio.src = "./assets/sounds/C.mp3"; 
             break;
           
           case 'DoDiese': 
             audio.src = "./assets/sounds/C%23.mp3"
-            
+            blanc=false;
             break;
           
           case 'Re':  
+          blanc=true;
             audio.src = "./assets/sounds/D.mp3"
             break;
 
           case 'ReDiese':  
+          blanc=false;
             audio.src = "./assets/sounds/D%23.mp3"
             break;
 
-          case 'Mi':  
+          case 'Mi': 
+          blanc=true; 
             audio.src = "./assets/sounds/E.mp3"
             break;
 
           case 'Fa':  
+          blanc=true;
             audio.src = "./assets/sounds/F.mp3"
             break;
           
-          case 'FaDiese':  
+          case 'FaDiese': 
+          blanc=false; 
             audio.src = "./assets/sounds/F%23.mp3"
             break;
 
-            case 'Sol':  
+            case 'Sol':
+            blanc=true;  
             audio.src = "./assets/sounds/G.mp3"
             break;
 
             case 'SolDiese':  
+            blanc=false; 
             audio.src = "./assets/sounds/G%23.mp3"
             break;
-            case 'La':  
+
+            case 'La': 
+            blanc=true; 
             audio.src = "./assets/sounds/A.mp3"
             break;
             case 'LaDiese':  
+            blanc=false;
             audio.src = "./assets/sounds/A%23.mp3"
             break;
+
             case 'Si':  
+            blanc=true;
             audio.src = "./assets/sounds/B.mp3"
             break;
 
@@ -147,9 +159,20 @@
             console.log("desolé je trouve pas le son")
         }
         audio.play() ;  
+        if(blanc==true){
+        setTimeout(MiseWhite(val),10000);
+        }
+        else{
+          setTimeout(MiseBlack(val),10000);
+        }
       });
       }
-
+      methods: {
+        playAudio : function (url) {
+            new Audio(url).play() ;
+        }
+    }
+}
       //Blanc
       const Do = document.getElementById('Do'); 
       Doid = Do.id;

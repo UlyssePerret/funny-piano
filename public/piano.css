@@ -16,6 +16,7 @@ Conteneur- clavier
     margin: auto; /*m-auto*/
     display: flex; /* flex*/
     flex-direction: column;/*flex-colum*/
+    box-shadow: 1px 1px 30px black ;
 }
 /*
 * Touches blanches
@@ -40,8 +41,7 @@ Conteneur- clavier
     height: 250px ;
     width: 70px ;
     background-color: #FFFFFF ;
-    margin: 0px 2px ;
-    color:yellow;
+    margin: 0px 2px ; 
 }
 
 .touche-blanche:focus  {
@@ -62,13 +62,16 @@ Conteneur- clavier
     width: 30px ;
     background-color:#000000 ;
     border-radius: 0px 0px 5px 5px ;
-    margin-left: 43px ;
+    margin-left: 40px ;
 }
 .touche-noire:nth-child(1) {
-    margin-left: 56px ;
+    margin-left: 55px ;
 }
 .touche-noire:nth-child(2) {
     margin-right: 73px ;
+}
+.touche-noire:nth-child(3) {
+    margin-right: 5px ;
 }
 .touche-blanche:focus  {
     color:red;  
@@ -93,16 +96,20 @@ Conteneur- clavier
 .image-emoji{ 
     display: flex;   
 }
-
+@media screen and  (min-width:700px )  {
+    .Piano {
+        padding-bottom: 50px;
+    }
+}  
 /**/
 /*Mobile*/
 /*rem le flex resous pas mal de souci mais il faut changer le padding et la hauteur entre titre-emoji de l'aplication*/
 /**/
-@media    (min-width:100px ) and (max-width:400px ){
+@media    (min-width:100px ) and (max-width:700px ){
  
     .Piano{ 
         /*position*/  
        padding: 1px;/*on change le padding pour que le clavier soit bien accoler*/
+       padding-bottom: 10px;
     } 
- 
-    }  
+ }  

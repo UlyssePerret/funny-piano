@@ -16,7 +16,7 @@
     }
         .text-texte{
             /*issue figmae*/
-            position: absolute;
+ 
             left: 9.34%;
             right: 9.34%;
             top: 21.67%;

@@ -1,0 +1,98 @@
+/**/
+/* Vue Normal - Desktop*/
+/**/ 
+
+body{
+    height:1000px;
+    background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
+
+} 
+   /**
+    Fonts
+    **/
+    .pt-mono { 
+        font-family: 'PT Mono', sans-serif;  
+    } 
+
+    .bloc-titre{
+        /*taille*/
+        width: 300px;
+        height: 60px; 
+        /*position*/ 
+        position: relative;
+        justify-content: center;
+        top:40px; 
+        
+        background: #111111;
+        border-radius: 10px;
+        }
+
+        .text-texte{
+          /*issue figmae*/
+          position:relative;
+
+        top: 20%; 
+        font-size: 30px;
+        line-height: 34px;
+        /* identical to box height */
+        text-align: center;
+        color: #FFFFFF;
+            }
+
+            .image-emoji{ 
+                /*position*/  
+                justify-content: center; 
+                margin-left: 45%;
+                margin-right: 45%;
+                margin-top:200px;
+                padding:10px;  
+                    }
+
+
+
+@media screen and  (min-width:500px )  {
+ /*test responsibe
+ .text-couleur{
+        color: red;  
+    }
+ */ 
+    /*Centre*/
+.centrer-titre{
+    /*margin*/ 
+    text-align: center;
+    margin-right: 45%; 
+    margin-left: 45%;  
+    } 
+
+    .centrer-image{ 
+        /*position*/  
+        justify-content: center;
+        margin-left: 35%;   
+            }
+
+            
+}
+/**/
+/*Mobile*/
+/**/
+@media    (min-width:100px ) and (max-width:700px ){
+ /*test responsibe
+ .text-couleur{
+        color: blue;  
+    }
+ */
+
+ .centrer-titre{ 
+/*position*/ 
+text-align: center;
+    margin-left: 30%; 
+    margin-right: 30%; 
+    }
+
+    .centrer-image{ 
+        /*position*/  
+            margin-left: 90px;  
+            margin-right: 0px;  
+            }
+
+}

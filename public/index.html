@@ -4,23 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../src/assets/main.css">
     <title>Piano-UP</title>
-    <style> 
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="main.css">
   </head>
-  <body>
+  <body class="pt-mono" >
     <noscript>
       <strong>We're sorry but Piano-UP doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-   <div id="titre" class="text-couleur">
-     BLABLA
+   <div id="titre" class=" bloc-titre centrer-titre">
+     <p class="text-texte">The emoji piano</p>
+     
+   </div>
+   <div id="future-emoji" class="image-emoji centrer-image" >
+    <img src="emoiji1.pnj" alt="image emoji test">
+   </div>
+   <div id="piano" class=" image-piano centrer-image">
+      <img src="piano.svg" alt="image du piano">
    </div>
     <!-- built files will be auto injected -->
     <!-- test div   <div id="app">  </div>-->
-    <script>
+    <script> 
+      console.log("Test Debut - je suis un piano")
+      const audio = document.createElement('audio')
+      audio.src = "./assets/sounds/Amp3"
+      audio.play()
 
+      console.log("Test Fin - je suis un piano")
     </script>
   </body>
 </html>

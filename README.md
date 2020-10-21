@@ -1,4 +1,9 @@
 # Crée et modifié par Ulysse Perret
+Crée le 21 octobre 2020
+v0.1 : HTML/CSS + JS (SON-Changement claver)
+
+A FAIRE
+API
 # The emoji piano
 
 Les consignes sont dans le wiki.

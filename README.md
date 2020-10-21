@@ -2,7 +2,8 @@
 # The emoji piano
 
 Les consignes sont dans le wiki.
-
+base : https://github.com/manudurgoni/funny-piano
+wiki : https://github.com/manudurgoni/funny-piano/wiki
 
 ## Installation
 ```

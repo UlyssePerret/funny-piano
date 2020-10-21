@@ -2,7 +2,7 @@
 /*Pour tout/
 /**/ 
 body{
-    height:1000px;
+    height:2000px;
     background-color: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
 } 
 
@@ -14,7 +14,7 @@ Fonts
 } 
 
 /*Que pour le conteur du titre*/
-.bloc-titre{
+.bloc-title{
     /*taille*/
     width: 300px;
     height: 60px; 
@@ -28,7 +28,7 @@ Fonts
     }
 
 /*Pour le titre*/
-.text-titre{ 
+.text-title{ 
 position:relative;
 
 top: 20%; 
@@ -39,7 +39,7 @@ text-align: center;
 color: #FFFFFF;
 } 
 
-.centrer-titre{ 
+.centrer-title{ 
     /*position*/ 
         text-align: center; 
         margin : auto; 
@@ -67,7 +67,78 @@ margin-top:200px;
     position: relative; 
   
 }
+/*
+* Test Piano - pn
+*/
+.Piano{
+    margin-top:10px;
+    padding: 1px;
+}
+.Piano-clavier {
+    height: 275px ;
+    width: 530px ;
+    border-radius: 10px ;
+    background: black ;
+    margin-bottom: 40px ;
+    align-items: center ;
+}
 
+.touche-blanche:nth-child(1) {
+    height: 250px ;
+    width: 70px ;
+    background: #FFFFFF ;
+    border-radius: 5px 0px 0px 5px ;
+}
+.touche-blanche:nth-child(7) {
+    height: 250px ;
+    width: 70px ;
+    background: #FFFFFF ; 
+    border-radius: 0px 5px 5px 0px ; 
+}
+.touche-blanche {
+    height: 250px ;
+    width: 70px ;
+    background: #FFFFFF ;
+    margin: 0px 2px ;
+}
+.touches-noires {
+    width: 500px ;
+    margin-top: -250px ;
+    align-items: flex-start ;
+}
+.touche-noire {
+    height: 185px ;
+    width: 30px ;
+    background: #000000 ;
+    border-radius: 0px 0px 5px 5px ;
+    margin-left: 43px ;
+}
+
+.touche-noire:nth-child(1) {
+    margin-left: 56px ;
+}
+.touche-noire:nth-child(2) {
+    margin-right: 73px ;
+}
+.Notes-clavier {
+    width: 531px ;
+    justify-content: center ;
+    padding-bottom: 34px;
+}
+.note {
+    text-transform: uppercase ;
+    width: 73px ;
+    color: rgba(255, 255, 255, 0.4) ;
+}
+
+/*
+*/ 
+.touche-blanche:focus {
+    background: #FFD12D ;
+}
+.touche-noire:focus {
+    background: #E6016F ;
+}
     /*
     *MEDIA : DESCKTOP 
     */
@@ -77,7 +148,6 @@ margin-top:200px;
             color: red;  
     }
     */
- 
 
     .image-piano{ 
         /*position*/ 
@@ -102,7 +172,6 @@ margin-top:200px;
     }
     */ 
  
-
     .image-piano{ 
         /*position*/ 
         margin:0; 
@@ -113,8 +182,5 @@ margin-top:200px;
         margin-left: 35%;
         margin-right: 35%;     
     }
- 
- 
-
 
 }

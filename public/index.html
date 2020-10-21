@@ -14,28 +14,56 @@
       <strong>We're sorry but Piano-UP doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <!-- titre -->
-   <div id="titre" class=" bloc-titre centrer-titre">
-     <h1 class="text-titre">The emoji piano</h1>
+   <div id="title" class=" bloc-title centrer-title">
+     <h1 class="text-title">The emoji piano</h1>
    </div>
       <!-- Future emoji -->
    <div id="future-emoji" class=" centrer-image image-emoji " >
     <img src="./images/emoji-img2.jpg" alt="emoji">
    </div>
-     <!-- Piano SVG -->
+     <!-- Piano SVG
    <div id="piano" class=" image-piano ">
       <img src="piano.svg" alt="image du piano">
-   </div>
-   <!--piano PNG-->
-   <div id="piano" class=" image-piano ">
-    <img src="piano.png" alt="image du piano">
- </div>
+   </div> -->
+   <!--piano Cancas-->
+   <div class="Piano">
+    <div class="Piano-clavier  m-auto flex flex-col">
+        <div class="touches-blanches flex mt-3">
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/C.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/D.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/E.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/F.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/G.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/A.mp3')"></button>
+            <button class="touche-blanche" @click="playAudio('/assets/sounds/B.mp3')"></button>
+        </div>
+        <div class="touches-noires flex">
+            <button class="touche-noire" @click="playAudio('/assets/sounds/Cc.mp3')"></button>
+            <button class="touche-noire" @click="playAudio('/assets/sounds/Dd.mp3')"></button>
+            <button class="touche-noire" @click="playAudio('/assets/sounds/Ff.mp3')"></button>
+            <button class="touche-noire" @click="playAudio('/assets/sounds/Gg.mp3')"></button>
+            <button class="touche-noire" @click="playAudio('/assets/sounds/Aa.mp3')"></button>
+        </div>
+        
+    </div>
+    <div class="Notes__container m-auto flex">
+        <p class="note">Do</p>
+        <p class="note">Ré</p>
+        <p class="note">Mi</p>
+        <p class="note">Fa</p>
+        <p class="note">Sol</p>
+        <p class="note">La</p>
+        <p class="note">Si</p>
+    </div>
+</div>
 
     <!-- built files will be auto injected -->
     <!-- test div   <div id="app">  </div>-->
     <script> 
       console.log("Test Debut - je suis un piano")
+
       const audio = document.createElement('audio')
-      audio.src = "./assets/sounds/Amp3"
+      audio.src = "./assets/sounds/A.mp3"
       audio.play()
 
       console.log("Test Fin - je suis un piano")

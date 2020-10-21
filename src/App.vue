@@ -1,14 +1,16 @@
 <template>
-  <div id="app" class="titre-emoji">
-    <h1 >The emoji piano</h1>
+
+  <div id="app" class="pt-mono">
+    <v-header></v-header> 
   </div>
 </template>
  
 <script>
-
+import VHeader from '@/Components/VHeader'
 export default {
   name: 'App',
   components: {
+    VHeader
   }
 }
 </script>

@@ -2,25 +2,29 @@
 body{
     background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
 }
+.text-texte{
+    font-family: "PT Mono" ,Arial serif;
+    color: #FFFFFF;  
+}
 /*Mobile*/
 @media (width-min:300px){
+
     .titre-emoji{
-        font-family: "PT Mono" ,Arial serif;
+        /*issue figmae*/
         position: absolute;
         left: 9.34%;
         right: 9.34%;
         top: 21.67%;
         bottom: 21.67%;
         
-        font-family: PT Mono;
+        font-family: "PT Mono";
         font-style: normal;
         font-weight: normal;
         font-size: 30px;
         line-height: 34px;
         /* identical to box height */
         text-align: center;
-        
         color: #FFFFFF;
-
+ 
     }
 }

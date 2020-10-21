@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
  
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="piano.css">
   </head>
   <body class="pt-mono" >
     <noscript>
@@ -29,7 +30,7 @@
    <div class="Piano">
     <div class="Piano-clavier ">
         <div class="touches-blanches flex mt-3">
-            <button class="touche-blanche" id="Do"> </button>
+            <button class="touche-blanche"  id="Do"> </button>
             <button class="touche-blanche" id="Re" > </button>
             <button class="touche-blanche" id="Mi"> </button>
             <button class="touche-blanche" id="Fa" > </button>
@@ -74,18 +75,36 @@
       La# -> A#   : /assets/sounds/A#.mp3 
       Si -> B    : /assets/sounds/B.mp3 
       */
+
+      function MiseYellow(val){
+        val.style.backgroundColor='yellow'; 
+      }
+      function MiseRed(val){
+        val.style.backgroundColor='red'; 
+      }
+      function MiseWhite(val){
+        val.style.backgroundColor='white'; 
+      }
+      function MiseBlack(val){
+        val.style.backgroundColor='black'; 
+      }
+
            //Son
         function toucherToucheClavier(id, val){
-        val.addEventListener('click', function (event) { 
+          blanc=false;
+          noir=false;
+        val.addEventListener("click", function (event) { 
         const audio = document.createElement('audio')
         console.log(id);
         switch (id) {
-          case 'Do': 
+          case 'Do':   
             audio.src = "./assets/sounds/C.mp3";
+          
             break;
           
           case 'DoDiese': 
             audio.src = "./assets/sounds/C#.mp3"
+            
             break;
           
           case 'Re':  
@@ -128,8 +147,7 @@
           default:
             console.log("desolé je trouve pas le son")
         }
-      
-        audio.play()
+        audio.play() ;  
       });
       }
 
@@ -170,8 +188,7 @@
       toucherToucheClavier(Fadid,FaDiese); 
       const LaDiese = document.getElementById('LaDiese');
       Ladid = LaDiese.id; 
-      toucherToucheClavier( Ladid,LaDiese);
-       toucherToucheClavier( Dodid,DoDiese);      
+      toucherToucheClavier( Ladid,LaDiese);     
     /*
        Do.addEventListener('click', function (event) {
        // console.log('Je suis un Do');

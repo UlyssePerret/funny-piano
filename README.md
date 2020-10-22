@@ -1,10 +1,12 @@
-# Crée et modifié par Ulysse Perret
+### Crée et modifié par Ulysse Perret
 Crée le 21 octobre 2020
+Modifie le 22 octobre 2020
 v0.1 : HTML/CSS + JS (SON-Changement claver)
 
-A FAIRE avant de rendre
-API=> generer un emoticon aleaoitre- utiliser api
-# The emoji piano
+A FAIRE
+API
+### The emoji piano
+
 Les consignes sont dans le wiki.
 base : https://github.com/manudurgoni/funny-piano
 
@@ -24,7 +26,7 @@ npm run serve
 https://github.com/UlyssePerret/funny-piano.git
 
 Attention pour cloner il faut faire :
-```git clone https://github.com/UlyssePerret/funny-piano``` 
+```git clone https://github.com/UlyssePerret/funny-piano.``` 
 
 Pour ajouter les nouveaux fichiers ```git add .```
 

@@ -1,4 +1,4 @@
-/*CSS que pour le PIANOT
+/*CSS que pour le PIANO 
 * Test Piano  
 Conteneur- clavier
 */
@@ -80,9 +80,9 @@ Conteneur- clavier
 *Notes de bas
 */
 .Notes-clavier {
-    width: 531px ;
+    width: 530px ;
     justify-content: center ;
-    padding-bottom: 34px;
+    padding-bottom: 35px;
     margin:auto; 
     display: flex;
 }
@@ -92,10 +92,7 @@ Conteneur- clavier
     color: rgba(255, 255, 255, 0.4) ;
     
 }
- 
-.image-emoji{ 
-    display: flex;   
-}
+
 @media screen and  (min-width:700px )  {
     .Piano {
         padding-bottom: 50px;
@@ -111,5 +108,6 @@ Conteneur- clavier
         /*position*/  
        padding: 1px;/*on change le padding pour que le clavier soit bien accoler*/
        padding-bottom: 10px;
+       margin-left:1px;
     } 
  }  

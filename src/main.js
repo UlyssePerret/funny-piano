@@ -8,4 +8,4 @@ import './assets/main.css'
 // new Vue({
 //   render: h => h(App),
 // }).$mount('#app')
-console.log('hello')
+//console.log('hello')

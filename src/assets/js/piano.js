@@ -21,31 +21,29 @@
 
  /**changerEmoticon
   * * Test pour changer juste l'image la premiere fois qu'on touche le clavier
-  */
+
  function changerEmoticon() {
    console.log('Changement Emoticon');
   let srcimg ; 
-  let x = document.getElementById("image-emoji");
-   /* Avec juste les images acutelle   */
+  let x = document.getElementById("image-emoji");  
+    Avec juste les images acutelle  
    srcimg = "./images/emoji-img3.jpg";
    //srcimg=*mettre le retour de l'api*
    x.setAttribute("src", srcimg);
  }
- 
- /**changerEmoticon
-  * * Test pour changer juste l'image la premiere fois
+ */
+ /**changerEmoticonApi 
   * Permet de changer d'emoji aleatoirement
   * rappel clé API GIHPY: la clé d'API de giphy hoc7Xw81iwUP2iewXhekupQznVmYDlHK
   */
 
  async  function changerEmoticonApi(){
  //import { GiphyFetch } from "@giphy/js-fetch-api"; 
-  const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
-  console.log('gf'+gf);
-  const { data: gifs } = await gf.trending({ limit: 10 });
-  console.log('gifs : '+gifs);
-   //const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
-  // console.log(gifs);
+  const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK'); 
+  const { data: gifs } = await gf.emoji();
+  console.log(gifs)
+  let x = document.getElementById("image-emoji");
+  let srcimg ; // pour la source image
 
     //preparation random
    let random = async () => {
@@ -56,16 +54,19 @@
         console.error(`random`, error);
       }
     };
+    // const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
    let random1= random();
    console.log(random1);
-   //on veut recuperer image_original_url 
-   console.log(random1.value);
-   const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
 
-    
-    console.log(gif); 
+   //test radom 2
+   const nbRandom = Math.floor(Math.random() * Math.floor(26)) ;
+   //console.log(gifs[nbRandom].images['fixed_width'].webp) ;
+   const urlRandom = gifs[nbRandom].images['fixed_width'].webp ;
+   //on veut recuperer image_original_url 
+  console.log(urlRandom );  
+  srcimg= urlRandom ;
     //il faut recuper la source de l'image
-   // x.setAttribute("src", srcimg); **/
+    x.setAttribute("src", srcimg);
   }
   //test
   changerEmoticonApi()
@@ -102,7 +103,7 @@
  //Quand appuis sur souris lever - changement coleur + Son
  function toucherToucheClavierU( id,  val) {
    val.addEventListener("mouseup", function (event) {
-     console.log(event);
+    if(event)
      switch (id) {
        case 'Do':
          MiseWhite(val)
@@ -162,7 +163,8 @@
       console.log(event); 
      }
      const audio = document.createElement('audio')
-     changerEmoticon()
+    // changerEmoticon();
+     changerEmoticonApi()
      switch (id) {
        case 'Do':
          MiseYellow(val)

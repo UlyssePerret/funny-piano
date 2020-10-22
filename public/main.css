@@ -1,9 +1,8 @@
 /* CSS PRINCIPALE*/
-/*Pour tout/
-/**/ 
+/*Pour tout main + piano */ 
 body{
     height:2000px;
-    background-color: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
+    background : linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
 } 
 
 /**
@@ -58,7 +57,102 @@ color: #FFFFFF;
     /*position*/ 
     position: relative;
     margin-top:300px; 
-}  
+ 
+    display: flex;   
+}
+/*Pur le PIANO 
+* Conteneur- clavier
+*/
+.Piano{
+    /*position*/ 
+    margin-top:20px; 
+}
+.Piano-clavier {
+    height: 275px ;
+    width: 530px ;
+    border-radius: 10px ;
+    background-color: black ;
+    margin-bottom: 40px ;
+    align-items: center ;
+    margin: auto; /*m-auto*/
+    display: flex; /* flex*/
+    flex-direction: column;/*flex-colum*/
+    box-shadow: 1px 1px 30px black ;
+}
+/*
+* Touches blanches
+*/
+.touche-blanches{
+    display: flex;/*flex */
+    margin-top: 0.75rem;/*mt-3*/
+}
+.touche-blanche:nth-child(1) {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ;
+    border-radius: 5px 0px 0px 5px ;
+}
+.touche-blanche:nth-child(7) {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ; 
+    border-radius: 0px 5px 5px 0px ; 
+}
+.touche-blanche {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ;
+    margin: 0px 2px ; 
+}
+
+.touche-blanche:focus  {
+    color:yellow;  
+}
+/*
+* Touches noires
+*/
+.touches-noires {
+    width: 500px ;
+    margin-top: -250px ;
+    align-items: flex-start ;
+    display: flex;
+}
+.touche-noire {
+    display: flex;
+    height: 185px ;
+    width: 30px ;
+    background-color:#000000 ;
+    border-radius: 0px 0px 5px 5px ;
+    margin-left: 40px ;
+}
+.touche-noire:nth-child(1) {
+    margin-left: 55px ;
+}
+.touche-noire:nth-child(2) {
+    margin-right: 73px ;
+}
+.touche-noire:nth-child(3) {
+    margin-right: 5px ;
+}
+.touche-blanche:focus  {
+    color:red;  
+}
+/*
+*Notes de bas
+*/
+.Notes-clavier {
+    width: 530px ;
+    justify-content: center ;
+    padding-bottom: 35px;
+    margin:auto; 
+    display: flex;
+}
+.note {
+    text-transform: uppercase ;
+    width: 73px ;
+    color: rgba(255, 255, 255, 0.4) ;
+    
+}
 
 
 /*
@@ -70,8 +164,9 @@ color: #FFFFFF;
             color: red;  
     }
     */
-
-
+    .Piano {
+        padding-bottom: 50px;
+    } 
 }
 /**/
 /*Mobile*/

@@ -1,74 +1,247 @@
-/**/
-/* Vue Normal - Desktop*/
-/**/ 
-@media screen and (max-width:1280px){
-    /*pour tester media
-        .text-couleur{
-           color: red;  
-       }
-    */
-       /*Titre Emoji*/
-       .bloc-titre{ 
-        /*margin*/ 
-        }
-      /**
-       Fonts
-       **/
-       .pt-mono { 
-           font-family: 'PT Mono', sans-serif;
-           font-style: normal;
-           font-weight: normal;
-       } 
-   }
-   
-   
-   /**/
-   /*Mobile*/
-   /**/
-    /*pour tester media
-        .text-couleur{
-           color: red;  
-       }
-    */
-           body{
-               background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
-           } 
+/* CSS PRINCIPALE*/
+/*Pour tout main + piano */ 
+body{
+    height:2000px; 
+    background: linear-gradient(135deg, #FF9D6C 0%, #BB4E75 100%);
+} 
+/**
+Fonts - Police
+**/
+.pt-mono { 
+    font-family: 'PT Mono', sans-serif;  
+} 
+
+/*Que pour le conteur du titre*/
+.bloc-title{
+    /*taille*/
+    width: 300px;
+    height: 60px; 
+    /*position*/ 
+    position: relative;
+    justify-content: center;
+    top:40px; 
+    /*Propriété*/
+    background : #111111;
+    border-radius: 10px;
+    }
+
+/*Pour le titre*/
+.text-title{ 
+    /*position*/
+   position:relative; 
+   top: 20%; 
+    /*taille*/
+   font-size: 30px;
+   line-height: 34px;
+    /*propriete*/
+   text-align: center;
+   color: #FFFFFF;
+   } 
+   .centrer-title{ 
+    /*position*/ 
+    text-align: center; 
+    margin : auto; 
+    } 
+.centrer-image{ 
+    /*position*/  
+    justify-content: center;  
+    margin : auto; 
+    } 
+
+.image-emoji{ 
+    /*taille*/
+    width:100%;
+    padding:10px;    
+    /*position*/ 
+    position: relative;
+    margin-top:300px;
+    display: flex;   
+    }
+
+/*CSS que pour le PIANO 
+* Test Piano  
+Conteneur- clavier
+*/
+.Piano{
+    /*position*/ 
+    margin-top:20px; 
+}
+.Piano-clavier {
+    height: 275px ;
+    width: 530px ;
+    border-radius: 10px ;
+    background-color: black ;
+    margin-bottom: 40px ;
+    align-items: center ;
+    margin: auto; /*m-auto*/
+    display: flex; /* flex*/
+    flex-direction: column;/*flex-colum*/
+    box-shadow: 1px 1px 30px black ;
+}
+/*
+* Touches blanches
+*/
+.touche-blanches{
+    display: flex;/*flex */
+    margin-top: 0.75rem;/*mt-3*/
+}
+.touche-blanche:nth-child(1) {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ;
+    border-radius: 5px 0px 0px 5px ;
+}
+.touche-blanche:nth-child(7) {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ; 
+    border-radius: 0px 5px 5px 0px ; 
+}
+.touche-blanche {
+    height: 250px ;
+    width: 70px ;
+    background-color: #FFFFFF ;
+    margin: 0px 2px ; 
+}
+
+.touche-blanche:focus  {
+    color:yellow;  
+}
+/*
+* Touches noires
+*/
+.touches-noires {
+    width: 500px ;
+    margin-top: -250px ;
+    align-items: flex-start ;
+    display: flex;
+}
+.touche-noire {
+    display: flex;
+    height: 185px ;
+    width: 30px ;
+    background-color:#000000 ;
+    border-radius: 0px 0px 5px 5px ;
+    margin-left: 40px ;
+}
+.touche-noire:nth-child(1) {
+    margin-left: 55px ;
+}
+.touche-noire:nth-child(2) {
+    margin-right: 70px ;
+}
+.touche-noire:nth-child(3) {
+    margin-right: 5px ;
+}
+.touche-blanche:focus  {
+    color:red;  
+}
+/*
+*Notes de bas
+*/
+.Notes-clavier {
+    width: 530px ;
+    justify-content: center ;
+    padding-bottom: 35px;
+    margin:auto; 
+    display: flex;
+}
+.note {
+    text-transform: uppercase ;
+    width: 70px ;
+    color: rgba(255, 255, 255, 0.4) ;
     
-       .bloc-titre{
-   /*taille*/
-   width: 300px;
-   height: 60px; 
-   /*position*/
-   position:relative;
-   /*marge*/
-       left: 0%;
-       right: 0%;
-       top: 0%;
-       bottom: 0%;
-       
-   
-       left: 40px;
-       top: 30px;
-   
+}    
+/*
+*MEDIA : DESKTOP 
+*/
+@media screen and  (min-width:700px )  {
+    /*test responsive
+    .text-couleur{
+            color: red;  
+    } 
+     */
+}
+
+/* 
+ *Mobile 
+ *rem le flex resous pas mal de souci  la hauteur entre titre-emoji de l'aplication 
+ */
+@media    (min-width:400px ) and (max-width:700px ){
+    /*test responsive 
+    .text-couleur{
+        color: blue;  
+    }
+    */ 
+    .Piano{ 
+        /*position*/  
+       padding: 1px;/*on change le padding pour que le clavier soit bien accoler*/
      
-    
-       background: #111111;
-       border-radius: 10px;
-       }
-       
-           .text-texte{
-               /*issue figmae*/
-               position:relative;
-               left: 9%;
-               right: 9%;
-               top: 21%;
-               bottom: 21%; 
-               font-size: 30px;
-               line-height: 34px;
-               /* identical to box height */
-               text-align: center;
-               color: #FFFFFF;
-        
-           }
-       
-    
+       margin-left:1px; 
+            padding-bottom: 35px;
+        }
+     .Piano-clavier {
+            max-height: 190px ;
+            max-width: 365px ;
+            margin-top: 70px ;
+        }
+        .conteneur-emoji {
+            margin-top: 100px ;
+        }
+        .touche-blanche:nth-child(1) {
+            height: 170px ;
+            width: 45px ;
+        } 
+        .touche-blanche:nth-child(7) {
+            height: 170px ;
+            width: 45px ;  
+        }
+        .touche-blanche {
+            height: 170px ;
+            width: 45px ;
+        }
+        .touches-noires {
+            width: 370px ;
+            margin-top: -175px ;
+        } 
+        .touche-noire {
+            height: 125px ;
+            width: 20px ;
+            margin-left: 30px ;
+        }
+         .touche-noire:nth-child(1) {
+            margin-left: 45px ;
+        } 
+        .touche-noire:nth-child(2) {
+            margin-right: 50px ;
+        }
+        .Notes-clavier {
+            max-width: 365px ; 
+        }
+        .note {
+            text-transform: uppercase ;
+            width: 45px ; 
+            
+        } 
+
+        @media   (max-width:400px ){
+            .text-couleur{
+                color: yellow;  
+            }
+            body{ 
+                width:2000px; 
+            } 
+            .Piano{ 
+                /*position*/  
+               padding: 1px;/*on change le padding pour que le clavier soit bien accoler*/
+               margin-left:1px; 
+                padding-bottom: 35px;
+                }
+             
+                .conteneur-emoji {
+                    position:center;
+                    margin-top: 100px ;
+                }
+                 
+        }
+}

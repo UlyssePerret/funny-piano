@@ -1,4 +1,4 @@
-//import { GiphyFetch } from '@giphy/js-fetch-api'
+ import { GiphyFetch } from '@giphy/js-fetch-api'
 //erreur : SyntaxError: Unexpected token '{'. import call expects exactly one argument.
 
 console.log("Test Debut - je suis un piano")

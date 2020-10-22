@@ -1,7 +1,6 @@
  import {
    GiphyFetch
  } from '@giphy/js-fetch-api'
- //erreur : SyntaxError: Unexpected token '{'. import call expects exactly one argument.
 
  console.log("Test Debut - je suis un piano")
  /*Table de Correspondance note FR-ANg
@@ -19,40 +18,43 @@
  Si -> B    : /assets/sounds/B.mp3 
  */
 
- const srcimg = document.getElementById('Do');
 
  /**changerEmoticon
   * * Test pour changer juste l'image la premiere fois qu'on touche le clavier
   */
  function changerEmoticon() {
+   console.log('Changement Emoticon');
+  let srcimg ; 
    var x = document.getElementById("image-emoji");
    /* Avec juste les images acutelle   */
-   const srcimg = "./images/emoji-img3.jpg";
+   srcimg = "./images/emoji-img3.jpg";
    //srcimg=*mettre le retour de l'api*
    x.setAttribute("src", srcimg);
  }
+ 
  /**changerEmoticon
   * * Test pour changer juste l'image la premiere fois
   * Permet de changer d'emoji aleatoirement
   * rappel clé API GIHPY: la clé d'API de giphy hoc7Xw81iwUP2iewXhekupQznVmYDlHK
   */
- /*
+
   function changerEmoticonApi(){
  //import { GiphyFetch } from "@giphy/js-fetch-api"; 
-    const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
-    const { data: gifs } = await gf.trending({ limit: 10 });
-    console.log(gifs);
-    const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
-    console.log(gifs);
+  const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
+  console.log('gf'+gf);
+   const { data: gifs } = await gf.trending({ limit: 10 });
+  //console.log('gf'+gifs);
+  //const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
+  //console.log(gifs);
 
     //preparation random
-    const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
+   // const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
     //il faut recuper la source de l'image
-   // x.setAttribute("src", srcimg);
+   // x.setAttribute("src", srcimg); **/
   }
   //test
   changerEmoticonApi()
-  **/
+ 
  /**MiseYellow(val)
   * Permet de mettre en fond jaune l'element (touche-blanche>touche jaune)
   * @param {*} val  : l'objet qu'on veut mettre en jaune
@@ -82,9 +84,10 @@
    val.style.backgroundColor = 'black';
  }
 
- //QuandMouse down - changement coleur + Son
+ //Quand appuis sur souris lever - changement coleur + Son
  function toucherToucheClavierU(id, val) {
    val.addEventListener("mouseup", function (event) {
+     console.log(event);
      switch (id) {
        case 'Do':
          MiseWhite(val)
@@ -140,9 +143,11 @@
 
  function toucherToucheClavierD(id, val) {
    val.addEventListener("mousedown", function (event) {
-     changerEmoticon();
+     if(event==val){
+      console.log(event); 
+     }
      const audio = document.createElement('audio')
-     console.log(id);
+     changerEmoticon()
      switch (id) {
        case 'Do':
          MiseYellow(val)
@@ -211,65 +216,65 @@
 
  //Blanc
  const Do = document.getElementById('Do');
- Doid = Do.id;
+ const Doid = Do.id;
  toucherToucheClavierD(Doid, Do);
  setTimeout(MiseWhite(Do), 1000); //-Pour resoudre bug si on touche premier fois do -> Yellow rester - se declence aprés une seconde
  toucherToucheClavierU(Doid, Do);
 
  const Re = document.getElementById('Re');
- Reid = Re.id;
+ const Reid = Re.id;
  toucherToucheClavierD(Reid, Re);
  toucherToucheClavierU(Reid, Re);
 
  const Mi = document.getElementById('Mi');
- Mid = Mi.id;
+ const Mid = Mi.id;
  toucherToucheClavierD(Mid, Mi);
  toucherToucheClavierU(Mid, Mi);
 
  const Fa = document.getElementById('Fa');
- Faid = Fa.id;
+ const Faid = Fa.id;
  toucherToucheClavierD(Faid, Fa);
  toucherToucheClavierU(Faid, Fa)
 
  const Sol = document.getElementById('Sol');
- Solid = Sol.id;
+ const Solid = Sol.id;
  toucherToucheClavierD(Solid, Sol);
  toucherToucheClavierU(Solid, Sol);
 
  const La = document.getElementById('La');
- Laid = La.id;
+ const Laid = La.id;
  toucherToucheClavierD(Laid, La);
  toucherToucheClavierU(Laid, La);
 
  const Si = document.getElementById('Si');
- Sid = Si.id;
+ const Sid = Si.id;
  toucherToucheClavierD(Sid, Si);
  toucherToucheClavierU(Sid, Si);
 
  //Noir
  const DoDiese = document.getElementById('DoDiese');
- Dodid = DoDiese.id;
+ const Dodid = DoDiese.id;
  toucherToucheClavierD(Dodid, DoDiese);
  toucherToucheClavierU(Dodid, DoDiese);
 
  const ReDiese = document.getElementById('ReDiese');
- Redid = ReDiese.id;
+ const Redid = ReDiese.id;
  toucherToucheClavierD(Redid, ReDiese);
  toucherToucheClavierU(Redid, ReDiese);
 
  const FaDiese = document.getElementById('FaDiese');
- Fadid = FaDiese.id;
+ const Fadid = FaDiese.id;
  toucherToucheClavierD(Fadid, FaDiese);
  toucherToucheClavierU(Fadid, FaDiese);
 
  const SolDiese = document.getElementById('SolDiese');
- Soldid = SolDiese.id;
+ const Soldid = SolDiese.id;
  toucherToucheClavierD(Soldid, SolDiese);
  toucherToucheClavierU(Soldid, SolDiese);
 
  const LaDiese = document.getElementById('LaDiese');
- Ladid = LaDiese.id;
+ const Ladid = LaDiese.id;
  toucherToucheClavierD(Ladid, LaDiese);
  toucherToucheClavierU(Ladid, LaDiese);
 
- console.log("Test Fin - je suis un piano")
+ console.log("Test Fin - je suis un piano");

@@ -7,6 +7,11 @@ v0.1 : HTML/CSS + JS (SON-Changement claver)
 
 A FAIRE
 API
+
+Dossiers
+docs : continet la demo et une image
+ 
+
 ### The emoji piano
 
 Les consignes sont dans le wiki.

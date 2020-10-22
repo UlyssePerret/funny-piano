@@ -1,4 +1,9 @@
 ### Crée et modifié par Ulysse Perret
+Nom : Perret ÏkhÎ Prenom - : Ulysse 
+Discord : Ulysse Perret #1166
+
+git : UlyssePerret
+
 Crée le 21 octobre 2020
 
 Modifie le 22 octobre 2020

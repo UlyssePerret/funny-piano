@@ -1,3 +1,6 @@
+//import { GiphyFetch } from '@giphy/js-fetch-api'
+//erreur : SyntaxError: Unexpected token '{'. import call expects exactly one argument.
+
 console.log("Test Debut - je suis un piano")
       /*Table de Correspondance note FR-ANg
       Do -> C : /assets/sounds/C.mp3
@@ -15,21 +18,39 @@ console.log("Test Debut - je suis un piano")
       */
      
       const srcimg = document.getElementById('Do'); 
- 
-    
-     /**changerEmotico
-      * * Mise en place de l'api Giphy
-      * Permet de changer d'emoji aleatoirement
-      * rappel clé API GIHPY: la clé d'API de giphy hoc7Xw81iwUP2iewXhekupQznVmYDlHK
+
+     /**changerEmoticon
+      * * Test pour changer juste l'image la premiere fois qu'on touche le clavier
       */
-      function  changerEmoticon(){ 
-        const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK')
+      function  changerEmoticon(){
         var x = document.getElementById("image-emoji");
         /* Avec juste les images acutelle   */
         const srcimg="./images/emoji-img3.jpg";
         //srcimg=*mettre le retour de l'api*
         x.setAttribute("src", srcimg); 
       };
+   /**changerEmoticon
+      * * Test pour changer juste l'image la premiere fois
+      * Permet de changer d'emoji aleatoirement
+      * rappel clé API GIHPY: la clé d'API de giphy hoc7Xw81iwUP2iewXhekupQznVmYDlHK
+      */
+     /*
+      function changerEmoticonApi(){
+     //import { GiphyFetch } from "@giphy/js-fetch-api"; 
+        const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
+        const { data: gifs } = await gf.trending({ limit: 10 });
+        console.log(gifs);
+        const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
+        console.log(gifs);
+
+        //preparation random
+        const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
+        //il faut recuper la source de l'image
+       // x.setAttribute("src", srcimg);
+      }
+      //test
+      changerEmoticonApi()
+      **/
       /**MiseYellow(val)
        * Permet de mettre en fond jaune l'element (touche-blanche>touche jaune)
        * @param {*} val  : l'objet qu'on veut mettre en jaune

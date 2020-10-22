@@ -38,17 +38,21 @@
   * rappel clé API GIHPY: la clé d'API de giphy hoc7Xw81iwUP2iewXhekupQznVmYDlHK
   */
 
-  function changerEmoticonApi(){
+ async  function changerEmoticonApi(){
  //import { GiphyFetch } from "@giphy/js-fetch-api"; 
   const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
   console.log('gf'+gf);
-   const { data: gifs } = await gf.trending({ limit: 10 });
-  //console.log('gf'+gifs);
-  //const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
-  //console.log(gifs);
+ const { data: gifs } = await gf.trending({ limit: 10 });
+   console.log('gifs'+gifs);
+   //const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
+  // console.log(gifs);
 
     //preparation random
-   // const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
+  
+   const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
+    
+   
+    console.log(gif);
     //il faut recuper la source de l'image
    // x.setAttribute("src", srcimg); **/
   }

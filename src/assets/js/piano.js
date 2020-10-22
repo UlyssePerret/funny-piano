@@ -25,7 +25,7 @@
  function changerEmoticon() {
    console.log('Changement Emoticon');
   let srcimg ; 
-   var x = document.getElementById("image-emoji");
+  let x = document.getElementById("image-emoji");
    /* Avec juste les images acutelle   */
    srcimg = "./images/emoji-img3.jpg";
    //srcimg=*mettre le retour de l'api*
@@ -42,17 +42,28 @@
  //import { GiphyFetch } from "@giphy/js-fetch-api"; 
   const gf = new GiphyFetch('hoc7Xw81iwUP2iewXhekupQznVmYDlHK');
   console.log('gf'+gf);
- const { data: gifs } = await gf.trending({ limit: 10 });
-   console.log('gifs'+gifs);
+  const { data: gifs } = await gf.trending({ limit: 10 });
+  console.log('gifs : '+gifs);
    //const { data: gifs } = await gf.search('dogs', { sort: 'relevant', lang: 'es', limit: 10, type: 'stickers' });
   // console.log(gifs);
 
     //preparation random
-  
+   let random = async () => {
+      try {
+        const result = await gf.random();
+        console.log(`random`, result);
+      } catch (error) {
+        console.error(`random`, error);
+      }
+    };
+   let random1= random();
+   console.log(random1);
+   //on veut recuperer image_original_url 
+   console.log(random1.value);
    const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
+
     
-   
-    console.log(gif);
+    console.log(gif); 
     //il faut recuper la source de l'image
    // x.setAttribute("src", srcimg); **/
   }
@@ -89,7 +100,7 @@
  }
 
  //Quand appuis sur souris lever - changement coleur + Son
- function toucherToucheClavierU(id, val) {
+ function toucherToucheClavierU( id,  val) {
    val.addEventListener("mouseup", function (event) {
      console.log(event);
      switch (id) {

@@ -1,14 +1,12 @@
 ### Crée et modifié par Ulysse Perret
-Nom : Perret ÏkhÎ Prenom - : Ulysse 
+Nom : Perret | Prenom  : Ulysse 
 Discord : Ulysse Perret #1166
-
 git : UlyssePerret
 
 Crée le 21 octobre 2020
-
 Modifie le 22 octobre 2020
 
-v0.1 : HTML/CSS + JS (SON-Changement claver)
+v0.1 : HTML/CSS + JS (Son-Changement claver)
 v0.2 : Ajout API + Responsive (+ structure projet)
 
 Dossiers
@@ -39,13 +37,10 @@ Attention pour cloner il faut faire :
 ```git clone https://github.com/UlyssePerret/funny-piano.``` 
 
 Pour ajouter les nouveaux fichiers ```git add .```
-
 Pour commiter avec un message ```git commit -am 'mon message de commit```
-
 Pour pusher sur votre repo github ```git push```
 
-
-### Solution Annexe
+```
 brew install yarn
 ```
  => Installation yarn
@@ -53,4 +48,5 @@ brew install yarn
 ```
 yarn serve
 ```
-=>lancment serveur serv
+
+=>lancement serveur serv

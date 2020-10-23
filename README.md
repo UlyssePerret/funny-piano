@@ -27,7 +27,7 @@ npm run serve
 
 Rappel pour Git https://github.com/UlyssePerret/funny-piano.git
 
-Attention pour cloner il faut faire : ```git clone https://github.com/UlyssePerret/funny-piano.``` 
+Attention pour cloner il faut faire : ```git clone https://github.com/UlyssePerret/funny-piano``` 
 
 Pour ajouter les nouveaux fichiers ```git add .```
 Pour commiter avec un message ```git commit -am 'mon message de commit```

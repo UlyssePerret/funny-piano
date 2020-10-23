@@ -15,11 +15,15 @@ Dossiers docs : contient la démo et une image
 Les consignes sont dans le wiki.
 base : https://github.com/manudurgoni/funny-piano wiki : https://github.com/manudurgoni/funny-piano/wiki
 
-## Installation ```
-npm install ```
+## Installation 
+```
+npm install
+```
 
-### Development ```
-npm run serve ```
+### Development
+```
+npm run serve
+```
 
 Rappel pour Git https://github.com/UlyssePerret/funny-piano.git
 
